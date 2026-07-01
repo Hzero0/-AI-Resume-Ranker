@@ -1,0 +1,49 @@
+# Redrob Hackathon — Submission Metadata
+team_name: "Antigravity"
+
+primary_contact:
+  name: "Antigravity Partner"
+  email: "antigravity@example.com"
+  phone: "+91-9999999999"
+
+team_members:
+  - name: "Antigravity Agent"
+    email: "antigravity@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/YOUR_USERNAME/India-Runs" # UPDATE THIS with your actual repo link
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker" # UPDATE THIS with your sandbox link
+
+reproduce_command: "python rank.py --candidates ./challenge_data/candidates.jsonl --out ./team_antigravity.csv --dashboard ./recruiter_dashboard.xlsx"
+
+compute:
+  platform: "Local PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12.5"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Gemini"
+  - "Claude"
+
+ai_usage_summary: |
+  Used Gemini (Antigravity AI Coding Assistant) to co-develop the filtering, scoring, and reasoning modules. 
+  No candidate data was sent to any external APIs; ranking is fully local and runs within 22 seconds on CPU.
+
+methodology_summary: |
+  An offline, high-throughput screening and scoring pipeline. Incorporates strict logical consistency checks 
+  to screen out 12k+ honeypot/anomalous candidates and keyword stuffers. Uses multi-factor scoring 
+  (experience, title relevance, semantic skills mapping, location, notice period) and behavioral signal 
+  multipliers. Outputs a standard CSV and a pivot-ready Excel dashboard.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
